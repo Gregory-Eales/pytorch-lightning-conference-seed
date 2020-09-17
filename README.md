@@ -1,4 +1,4 @@
-### pytorch-lightning-conference-seed
+### pytorch-lightning-rl-seed
 Use this seed to refactor your PyTorch research code for:  
 - a paper submission  
 - a new research project.     
