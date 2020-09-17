@@ -9,10 +9,10 @@ from argparse import ArgumentParser
 import pytorch_lightning as pl
 
 
-class CoolSystem(pl.LightningModule):
+class Agent(pl.LightningModule):
 
     def __init__(self, hparams):
-        super(CoolSystem, self).__init__()
+        super(Agent, self).__init__()
         # not the best model...
         self.hparams = hparams
         self.l1 = torch.nn.Linear(28 * 28, 10)
@@ -63,4 +63,3 @@ class CoolSystem(pl.LightningModule):
         parser.add_argument('--max_nb_epochs', default=2, type=int)
 
         return parser
-
