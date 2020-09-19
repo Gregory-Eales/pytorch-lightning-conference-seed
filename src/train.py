@@ -7,7 +7,11 @@ from torch.utils.data import DataLoader
 from argparse import ArgumentParser
 import pytorch_lightning as pl
 
+# trains the specific algorithm
 from algorithm.trainer import AlgorithmTrainer
+
+# lightning wrapper for orchestrating the algorithm
+from algorithm.algorithm import Algorithm
 
 pl.seed_everything(123)
 
