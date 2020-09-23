@@ -8,12 +8,11 @@ class Actor(torch.nn.Module):
 
 	"""
 
-	def __init__(self):
+	def __init__(self, hparams):
 
 		super(Actor, self).__init__()
 
 
 
-	def act(self, state):
+	def forward(self, x):
 
-		pass

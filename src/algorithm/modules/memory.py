@@ -9,5 +9,5 @@ class Memory(torch.nn.Module):
 	"""
 
 
-	def __init__(self):
+	def __init__(self, hparams):
 		pass
