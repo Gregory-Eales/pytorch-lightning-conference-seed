@@ -11,11 +11,26 @@ class Critic(torch.nn.Module):
 
 	def __init__(self, hparams):
 
-		self.l1 = torch.nn.Linear(100, 100)
+		super(Critic, self).__init__()
+
+		self.l1 = torch.nn.Linear(1024, 256)
+		self.l2 = torch.nn.Linear(256, 256)
+		self.l3 = torch.nn.Linear(256, 15)
 
 		self.relu = torch.nn.LeakyReLU()
+
+		self.loss = torch.nn.MSELoss()
 
 
 	def forward(self, x):
 
-		pass
+		out = x
+
+		out = self.l1(out)
+		out = self.relu(out)
+
+		out = self.l2(out)
+		out = self.relu(out)
+
+		out = self.l3(out)
+		return out

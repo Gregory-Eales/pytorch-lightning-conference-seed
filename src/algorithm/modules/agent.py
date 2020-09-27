@@ -1,6 +1,8 @@
 import torch
 import numpy as np
 
+from buffer import Buffer
+
 class Agent:
     """
     Base Agent class handling the interaction with the environment

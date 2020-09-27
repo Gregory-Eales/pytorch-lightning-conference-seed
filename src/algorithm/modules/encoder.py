@@ -1,10 +1,10 @@
 from torch import nn
 import torch
 
-class LargeEncoder(nn.Module):
+class Encoder(nn.Module):
 
     def __init__(self, hparams):
-        super(LargeEncoder, self).__init__()
+        super(Encoder, self).__init__()
 
         self.conv1 = nn.Conv2d(3, 32, kernel_size=4, stride=2)
         self.conv2 = nn.Conv2d(32, 64, kernel_size=4, stride=2)
